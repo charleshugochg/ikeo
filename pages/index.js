@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Button } from '@nextui-org/react'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -52,6 +54,9 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <section>
+          <Button>NextUI Integrated</Button>
+        </section>
       </main>
 
       <footer className={styles.footer}>
