@@ -1,8 +1,8 @@
-import React from 'react'
-
-const Product = ({name, description, price, images, summary}) => {
+const Product = ({ name, description, price, images, summary }) => {
   return (
-    <div>{name}</div>
+    <div>
+      <p>{name}</p>
+    </div>
   )
 }
 
