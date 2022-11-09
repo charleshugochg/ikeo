@@ -25,6 +25,6 @@ jobs:
             git pull origin main
             git status
             npm ci
-            npm build
+            npm run build
             pm2 restart ikeo
             pm2 status
