@@ -1,0 +1,30 @@
+name: CD
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+  workflow_dispatch:
+  
+jobs:
+  CD:
+    name: Continuous Delivery
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH into production server
+        uses: appleboy/ssh-action@master
+        with:
+          host: minheinkhant.com
+          username: ubuntu
+          key: ${{secrets.CD_SK}}
+          port: 22
+          script: |
+            cd ikeo
+            git checkout main
+            git pull origin main
+            git status
+            npm ci
+            npm build
+            pm2 restart ikeo
+            pm2 status
