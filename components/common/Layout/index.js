@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
-import Navbar from '../Navbar'
+
+import Header from '../Header'
 
 const index = ({ children }) => {
   return (
     <Fragment>
-      <Navbar />
+      <Header />
       <main className="p-8">{children}</main>
     </Fragment>
   )
