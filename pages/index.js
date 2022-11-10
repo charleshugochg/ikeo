@@ -23,6 +23,7 @@ export default function Home() {
             Home
           </Navbar.Link>
           <Navbar.Link href="/products">products</Navbar.Link>
+          <Navbar.Link href="/products/product">product page</Navbar.Link>
           <Navbar.Link href="/contact">Contact</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
