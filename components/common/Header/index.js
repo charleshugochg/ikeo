@@ -4,7 +4,7 @@ const index = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block text-cyan-600" href="/">
+            <a className="block text-slate-800" href="/">
               <span className="sr-only">Home</span>
               <svg
                 className="h-8"
@@ -24,7 +24,7 @@ const index = () => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-slate-600 transition hover:text-slate-600/75"
                     href="/"
                   >
                     Home
@@ -32,7 +32,7 @@ const index = () => {
                 </li>
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-slate-600 transition hover:text-slate-600/75"
                     href="/products"
                   >
                     Product
@@ -40,7 +40,7 @@ const index = () => {
                 </li>
                 <li>
                   <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-slate-600 transition hover:text-slate-600/75"
                     href="/contact"
                   >
                     Contact
@@ -52,14 +52,14 @@ const index = () => {
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <a
-                className="rounded-md bg-cyan-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                className="rounded-md bg-slate-800 px-5 py-2.5 text-sm font-medium text-white shadow"
                 href="/"
               >
                 Login
               </a>
               <div className="hidden sm:flex">
                 <a
-                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-cyan-600"
+                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-slate-800"
                   href="/"
                 >
                   Register
