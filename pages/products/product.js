@@ -1,27 +1,13 @@
 import { Fragment } from "react"
-import Image from "next/image"
 
-import { Carousel } from "flowbite-react"
+import EmblaCarousel from "../../components/EmblaCarousel"
 
 export default function Product ({ name, images }) {
   return (
     <Fragment>
       <h1>Product page</h1>
       <p>{ name }</p>
-      <div className="h-96 w-96 select-none">
-        <Carousel>
-          {images.map(image_url => (
-            <div key={image_url} className="w-full h-full relative">
-              <Image
-                src={image_url}
-                alt={name}
-                objectFit="cover"
-                fill
-              />
-            </div>
-          ))}
-        </Carousel>
-      </div>
+      <EmblaCarousel name={name} images={images} />
     </Fragment>
   )
 }
