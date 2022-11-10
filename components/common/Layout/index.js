@@ -6,7 +6,9 @@ const index = ({ children }) => {
   return (
     <Fragment>
       <Header />
-      <main className="p-8">{children}</main>
+      <main className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        {children}
+      </main>
     </Fragment>
   )
 }

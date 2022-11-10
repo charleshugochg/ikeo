@@ -27,31 +27,23 @@ const index = () => {
                     className="text-gray-500 transition hover:text-gray-500/75"
                     href="/"
                   >
-                    About
+                    Home
                   </a>
                 </li>
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
+                    href="/products"
                   >
-                    Careers
+                    Product
                   </a>
                 </li>
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
+                    href="/contact"
                   >
-                    History
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Services
+                    Contact
                   </a>
                 </li>
               </ul>
