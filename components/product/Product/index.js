@@ -4,7 +4,7 @@ const Product = ({ name, description, price, images, summary }) => {
       <img
         alt={name}
         src={images[0]}
-        className="h-[300px] w-full object-cover sm:h-[300px]"
+        className="h-[300px] w-full object-cover sm:h-[300px] rounded"
       />
       <div className="mt-2 text-slate-900">
         <p className="uppercase">{name}</p>
