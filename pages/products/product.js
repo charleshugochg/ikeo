@@ -1,22 +1,29 @@
 import { Fragment } from "react"
 import Image from "next/image"
 
+import useEmblaCarousel from "embla-carousel-react"
+
 export default function Product ({ name, images }) {
+  const [emblaRef] = useEmblaCarousel()
+
   return (
     <Fragment>
       <h1>Product page</h1>
       <p>{ name }</p>
-      {images.map(image_url => (
-        <div key={image_url}>
-          <Image
-            src={image_url}
-            alt={name}
-            objectFit="cover"
-            width={360}
-            height={360}
-          />
+      <div className="w-96 overflow-hidden" ref={emblaRef}>
+        <div className="flex select-none">
+          {images.map(image_url => (
+            <div key={image_url} className="h-96 relative grow-0 shrink-0 basis-full">
+              <Image
+                src={image_url}
+                alt={name}
+                objectFit="cover"
+                fill
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </Fragment>
   )
 }
