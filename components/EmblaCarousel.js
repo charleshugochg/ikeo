@@ -1,13 +1,19 @@
+import { useCallback } from "react"
 import Image from "next/image"
 
 import useEmblaCarousel from "embla-carousel-react"
 
 export default function EmblaCarousel({ name, images }) {
-  const [mainEmblaRef] = useEmblaCarousel()
-  const [thumbEmblaRef] = useEmblaCarousel({
+  const [mainEmblaRef, mainEmbla] = useEmblaCarousel()
+  const [thumbEmblaRef, thumbEmbla] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
   })
+
+  const onThumbClick = useCallback((index) => {
+    if (!mainEmbla || !thumbEmbla) return;
+    if (thumbEmbla.clickAllowed()) mainEmbla.scrollTo(index)
+  }, [mainEmbla, thumbEmbla])
 
   return (
     <>
@@ -28,14 +34,14 @@ export default function EmblaCarousel({ name, images }) {
       <div className="w-96 overflow-hidden" ref={thumbEmblaRef}>
         <div className="flex select-none">
           {images.map((image_url, index) => (
-            <div key={index} className="h-20 w-20 relative shrink-0">
+            <button key={index} className="h-20 w-20 relative shrink-0" onClick={() => onThumbClick(index)}>
               <Image
                 src={image_url}
                 alt={name}
                 objectFit="cover"
                 fill
               />
-            </div>
+            </button>
           ))}
         </div>
       </div>
