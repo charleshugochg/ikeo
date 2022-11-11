@@ -19,6 +19,7 @@ export default function EmblaCarousel({ name, images }) {
   const onSelect = useCallback(() => {
     if (!mainEmbla || !thumbEmbla) return;
     setSelectedIndex(mainEmbla.selectedScrollSnap())
+    thumbEmbla.scrollTo(mainEmbla.selectedScrollSnap())
   }, [mainEmbla, thumbEmbla])
 
   useEffect(() => {
