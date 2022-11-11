@@ -31,17 +31,19 @@ export default function EmblaCarousel({ name, images }) {
           ))}
         </div>
       </div>
-      <div className="w-96 overflow-hidden" ref={thumbEmblaRef}>
+      <div className="w-96 overflow-hidden mt-1" ref={thumbEmblaRef}>
         <div className="flex select-none">
           {images.map((image_url, index) => (
-            <button key={index} className="h-20 w-20 relative shrink-0" onClick={() => onThumbClick(index)}>
-              <Image
-                src={image_url}
-                alt={name}
-                objectFit="cover"
-                fill
-              />
-            </button>
+            <div className="p-0.5">
+              <button key={index} className="h-20 w-20 relative shrink-0" onClick={() => onThumbClick(index)}>
+                <Image
+                  src={image_url}
+                  alt={name}
+                  objectFit="cover"
+                  fill
+                />
+              </button>
+            </div>
           ))}
         </div>
       </div>
