@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Image from "next/image"
 
 import useEmblaCarousel from "embla-carousel-react"
@@ -15,6 +15,17 @@ export default function EmblaCarousel({ name, images }) {
     if (!mainEmbla || !thumbEmbla) return;
     if (thumbEmbla.clickAllowed()) mainEmbla.scrollTo(index)
   }, [mainEmbla, thumbEmbla])
+
+  const onSelect = useCallback(() => {
+    if (!mainEmbla || !thumbEmbla) return;
+    setSelectedIndex(mainEmbla.selectedScrollSnap())
+  }, [mainEmbla, thumbEmbla])
+
+  useEffect(() => {
+    if (!mainEmbla) return;
+    onSelect()
+    mainEmbla.on("select", onSelect)
+  }, [mainEmbla])
 
   return (
     <>
