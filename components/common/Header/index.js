@@ -46,6 +46,14 @@ const index = () => {
                     Contact
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                    href="/products/product"
+                  >
+                    Product Page
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
